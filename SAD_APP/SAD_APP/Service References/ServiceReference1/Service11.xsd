@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/sadServices" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/sadServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://derekfoster.cloudapp.net/sadservices/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfimage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="image" nillable="true" type="tns:image" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfimage" nillable="true" type="tns:ArrayOfimage" />
+  <xs:complexType name="image">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="guid" type="ser:guid" />
+      <xs:element minOccurs="0" name="imageData" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="latitude" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="longitude" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="image" nillable="true" type="tns:image" />
+</xs:schema>

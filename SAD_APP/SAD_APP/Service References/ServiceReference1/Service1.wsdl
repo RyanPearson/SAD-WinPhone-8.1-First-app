@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://derekfoster.cloudapp.net/sadservices/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://derekfoster.cloudapp.net/sadservices/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://derekfoster.cloudapp.net/sadservices/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/sadServices" />
+      <xsd:import schemaLocation="http://derekfoster.cloudapp.net/sadservices/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_AddImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddImage" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ViewImages_InputMessage">
+    <wsdl:part name="parameters" element="tns:ViewImages" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ViewImages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ViewImagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SearchImages_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchImages" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SearchImages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchImagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSentiment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSentiment" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSentiment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSentimentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTop40_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTop40" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTop40_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTop40Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRandomSingle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRandomSingle" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRandomSingle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRandomSingleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNumberOne_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberOne" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNumberOne_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberOneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SearchMovies_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchMovies" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SearchMovies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchMoviesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_discoverMovies_InputMessage">
+    <wsdl:part name="parameters" element="tns:discoverMovies" />
+  </wsdl:message>
+  <wsdl:message name="IService1_discoverMovies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:discoverMoviesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_movieDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:movieDetails" />
+  </wsdl:message>
+  <wsdl:message name="IService1_movieDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:movieDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEnergyData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEnergyData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEnergyData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEnergyDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCrimeData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCrimeData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCrimeData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCrimeDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="AddImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddImage" message="tns:IService1_AddImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddImageResponse" message="tns:IService1_AddImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewImages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ViewImages" message="tns:IService1_ViewImages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ViewImagesResponse" message="tns:IService1_ViewImages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchImages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SearchImages" message="tns:IService1_SearchImages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SearchImagesResponse" message="tns:IService1_SearchImages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSentiment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetSentiment" message="tns:IService1_GetSentiment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetSentimentResponse" message="tns:IService1_GetSentiment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTop40">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTop40" message="tns:IService1_GetTop40_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTop40Response" message="tns:IService1_GetTop40_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRandomSingle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetRandomSingle" message="tns:IService1_GetRandomSingle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetRandomSingleResponse" message="tns:IService1_GetRandomSingle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberOne">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetNumberOne" message="tns:IService1_GetNumberOne_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetNumberOneResponse" message="tns:IService1_GetNumberOne_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchMovies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SearchMovies" message="tns:IService1_SearchMovies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SearchMoviesResponse" message="tns:IService1_SearchMovies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="discoverMovies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/discoverMovies" message="tns:IService1_discoverMovies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/discoverMoviesResponse" message="tns:IService1_discoverMovies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="movieDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/movieDetails" message="tns:IService1_movieDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/movieDetailsResponse" message="tns:IService1_movieDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEnergyData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetEnergyData" message="tns:IService1_GetEnergyData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetEnergyDataResponse" message="tns:IService1_GetEnergyData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCrimeData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCrimeData" message="tns:IService1_GetCrimeData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCrimeDataResponse" message="tns:IService1_GetCrimeData_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddImage">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ViewImages">
+      <soap:operation soapAction="http://tempuri.org/IService1/ViewImages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchImages">
+      <soap:operation soapAction="http://tempuri.org/IService1/SearchImages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSentiment">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetSentiment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTop40">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetTop40" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRandomSingle">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetRandomSingle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberOne">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetNumberOne" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchMovies">
+      <soap:operation soapAction="http://tempuri.org/IService1/SearchMovies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="discoverMovies">
+      <soap:operation soapAction="http://tempuri.org/IService1/discoverMovies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="movieDetails">
+      <soap:operation soapAction="http://tempuri.org/IService1/movieDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEnergyData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetEnergyData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCrimeData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCrimeData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://derekfoster.cloudapp.net/sadservices/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
